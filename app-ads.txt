@@ -1,5 +1,1 @@
-#MY Calendar iOS
-google.com, pub-7384158277867734, DIRECT, f08c47fec0942fa0
-
-#MY Calendar Android
 google.com, pub-7384158277867734, DIRECT, f08c47fec0942fa0
