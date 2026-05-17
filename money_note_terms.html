@@ -1,41 +1,224 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Money Note Terms &amp; Conditions</title>
+<title>Money Note — Terms &amp; Conditions</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    color: #222;
-}
-h1 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-.section {
-    margin-bottom: 24px;
-}
-p {
-    margin: 10px 0;
-    white-space: pre-wrap;
-}
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #4a4a6a;
+    --accent: #2d6a4f;
+    --accent-light: #52b788;
+    --cream: #fafaf7;
+    --rule: #e8e8e0;
+    --tag-bg: #edf6f0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.85;
+  }
+
+  /* ── Header ── */
+  header {
+    padding: 56px 40px 32px;
+    border-bottom: 2px solid var(--rule);
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .app-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .meta {
+    font-size: 13px;
+    color: var(--ink-light);
+    letter-spacing: .03em;
+  }
+  .meta strong { color: var(--accent); font-weight: 500; }
+
+  /* ── Layout ── */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 52px 40px 80px;
+  }
+
+  /* ── Section ── */
+  .policy-section { margin-bottom: 52px; scroll-margin-top: 40px; }
+  .policy-section + .policy-section { border-top: 1px solid var(--rule); padding-top: 52px; }
+  .section-header { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 22px; }
+  .section-num {
+    flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+    background: var(--tag-bg); color: var(--accent); font-size: 12px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center; margin-top: 4px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: 1.35rem;
+    font-weight: 600; color: var(--ink); line-height: 1.3;
+  }
+  .policy-section p { font-size: 15px; color: var(--ink-light); margin-bottom: 14px; }
+  .policy-section p:last-child { margin-bottom: 0; }
+
+  /* ── Bullet list ── */
+  .policy-list { list-style: none; margin: 12px 0; }
+  .policy-list li {
+    position: relative; padding: 8px 0 8px 22px; font-size: 15px;
+    color: var(--ink-light); border-bottom: 1px solid var(--rule);
+  }
+  .policy-list li:last-child { border-bottom: none; }
+  .policy-list li::before {
+    content: ''; position: absolute; left: 0; top: 18px;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--accent-light);
+  }
+
+  /* ── Highlight card ── */
+  .highlight-card {
+    background: var(--tag-bg); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 20px 0;
+    font-size: 14px; color: var(--ink); line-height: 1.7;
+  }
+  .highlight-card strong { color: var(--accent); }
+
+  /* ── Warning card ── */
+  .warning-card {
+    background: #fdf6ec; border-left: 3px solid #c07a2a;
+    border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 20px 0;
+    font-size: 13.5px; color: #5a3e1b; line-height: 1.75;
+  }
+  .warning-card strong { color: #c07a2a; }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--rule); text-align: center;
+    padding: 36px 20px; font-size: 13px; color: var(--ink-light);
+    max-width: 860px; margin: 0 auto;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
+
+  @media (max-width: 600px) { header, main { padding-left: 24px; padding-right: 24px; } }
 </style>
 </head>
 <body>
-<h1>Money Note Terms &amp; Conditions</h1>
-<div class="content">
-<div class="section"><p>LICENSED APPLICATION END USER LICENSE AGREEMENTApps made available through the App Store are licensed, not sold, to you. Your license to each App is subject to your prior acceptance of either this Licensed Application End User License Agreement (“Standard EULA”), or a custom end user license agreement between you and the Application Provider (“Custom EULA”), if one is provided. Your license to any Apple App under this Standard EULA or Custom EULA is granted by Apple, and your license to any Third Party App under this Standard EULA or Custom EULA is granted by the Application Provider of that Third Party App. Any App that is subject to this Standard EULA is referred to herein as the “Licensed Application.” The Application Provider or Apple as applicable (“Licensor”) reserves all rights in and to the Licensed Application not expressly granted to you under this Standard EULA.a. Scope of License: Licensor grants to you a nontransferable license to use the Licensed Application on any Apple-branded products that you own or control and as permitted by the Usage Rules. The terms of this Standard EULA will govern any content, materials, or services accessible from or purchased within the Licensed Application as well as upgrades provided by Licensor that replace or supplement the original Licensed Application, unless such upgrade is accompanied by a Custom EULA. Except as provided in the Usage Rules, you may not distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. You may not transfer, redistribute or sublicense the Licensed Application and, if you sell your Apple Device to a third</p></div>
-<div class="section"><p>party, you must remove the Licensed Application from the Apple Device before doing so. You may not copy (except as permitted by this license and the Usage Rules), reverse-engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application, any updates, or any part thereof (except as and only to the extent that any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open-sourced components included with the Licensed Application).b. Consent to Use of Data: You agree that Licensor may collect and use technical data and related information—including but not limited to technical information about your device, system and application software, and peripherals—that is gathered periodically to facilitate the provision of software updates, product support, and other services to you (if any) related to the Licensed Application. Licensor may use this information, as long as it is in a form that does not personally identify you, to improve its products or to provide services or technologies to you.c. Termination. This Standard EULA is effective until terminated by you or Licensor. Your rights under this Standard EULA will terminate automatically if you fail to comply with any of its terms. d. External Services. The Licensed Application may enable access to Licensor’s and/or third-party services and websites (collectively and individually, “External Services”). You agree to use the External Services at your sole risk. Licensor is not responsible for examining or evaluating the content or accuracy of any third-party</p></div>
-<div class="section"><p>External Services, and shall not be liable for any such third-party External Services. Data displayed by any Licensed Application or External Service, including but not limited to financial, medical and location information, is for general informational purposes only and is not guaranteed by Licensor or its agents. You will not use the External Services in any manner that is inconsistent with the terms of this Standard EULA or that infringes the intellectual property rights of Licensor or any third party. You agree not to use the External Services to harass, abuse, stalk, threaten or defame any person or entity, and that Licensor is not responsible for any such use. External Services may not be available in all languages or in your Home Country, and may not be appropriate or available for use in any particular location. To the extent you choose to use such External Services, you are solely responsible for compliance with any applicable laws. Licensor reserves the right to change, suspend, remove, disable or impose access restrictions or limits on any External Services at any time without notice or liability to you. e. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED APPLICATION IS AT YOUR SOLE RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED APPLICATION ARE PROVIDED “AS IS” AND “AS AVAILABLE,” WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</p></div>
-<div class="section"><p>WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND OF NONINFRINGEMENT OF THIRD-PARTY RIGHTS. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY LICENSOR OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.f. Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL LICENSOR BE LIABLE FOR PERSONAL INJURY OR ANY INCIDENTAL, SPECIAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, OR OTHERWISE) AND EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO</p></div>
-<div class="section"><p>YOU. In no event shall Licensor’s total liability to you for all damages (other than as may be required by applicable law in cases involving personal injury) exceed the amount of fifty dollars ($50.00). The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.g. You may not use or otherwise export or re-export the Licensed Application except as authorized by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S.-embargoed countries or (b) to anyone on the U.S. Treasury Department’s Specially Designated Nationals List or the U.S. Department of Commerce Denied Persons List or Entity List. By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture, or production of nuclear, missile, or chemical or biological weapons.h. The Licensed Application and related documentation are “Commercial Items” , as that term is defined at 48 C.F.R. §2.101, consisting of “Commercial Computer Software” and “Commercial Computer Software Documentation” , as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial</p></div>
-<div class="section"><p>Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright laws of the United States.i. Except to the extent expressly provided in the following paragraph, this Agreement and the relationship between you and Apple shall be governed by the laws of the State of California, excluding its conflicts of law provisions. You and Apple agree to submit to the personal and exclusive jurisdiction of the courts located within the county of Santa Clara, California, to resolve any dispute or claim arising from this Agreement. If (a) you are not a U.S. citizen; (b) you do not reside in the U.S.; (c) you are not accessing the Service from the U.S.; and (d) you are a citizen of one of the countries identified below, you hereby agree that any dispute or claim arising from this Agreement shall be governed by the applicable law set forth below, without regard to any conflict of law provisions, and you hereby irrevocably submit to the non-exclusive jurisdiction of the courts located in the state, province or country identified below whose law governs:If you are a citizen of any European Union country or Switzerland, Norway or Iceland, the governing law and forum shall be the laws and courts of your usual place of residence.Specifically excluded from application to this Agreement is that law known as the United Nations Convention on the International Sale of Goods.</p></div>
-</div>
+
+<header>
+  <div class="app-badge">Money Note · Legal</div>
+  <h1>Terms &amp; Conditions</h1>
+  <p class="meta">Licensed Application End User License Agreement</p>
+</header>
+
+<main>
+
+  <section class="policy-section" id="overview">
+    <div class="section-header"><div class="section-num">A</div><h2 class="section-title">About This Agreement</h2></div>
+    <p>Apps made available through the App Store are licensed, not sold, to you. Your license to each App is subject to your prior acceptance of either this Licensed Application End User License Agreement ("Standard EULA"), or a custom end user license agreement between you and the Application Provider ("Custom EULA"), if one is provided.</p>
+    <p>Your license to any Apple App under this Standard EULA or Custom EULA is granted by Apple, and your license to any Third Party App under this Standard EULA or Custom EULA is granted by the Application Provider of that Third Party App. Any App subject to this Standard EULA is referred to herein as the "Licensed Application." The Licensor reserves all rights in and to the Licensed Application not expressly granted to you under this Standard EULA.</p>
+  </section>
+
+  <section class="policy-section" id="scope">
+    <div class="section-header"><div class="section-num">B</div><h2 class="section-title">Scope of License</h2></div>
+    <p>Licensor grants you a nontransferable license to use the Licensed Application on any Apple-branded products that you own or control, as permitted by the Usage Rules.</p>
+    <ul class="policy-list">
+      <li>You may not distribute or make the Licensed Application available over a network where it could be used by multiple devices simultaneously.</li>
+      <li>You may not transfer, redistribute, or sublicense the Licensed Application.</li>
+      <li>If you sell your Apple Device to a third party, you must remove the Licensed Application from the device before doing so.</li>
+      <li>You may not copy (except as permitted by this license), reverse-engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application.</li>
+    </ul>
+    <p>The terms of this EULA govern any content, materials, or services accessible from or purchased within the Licensed Application, as well as upgrades provided by Licensor that replace or supplement the original application.</p>
+  </section>
+
+  <section class="policy-section" id="data-consent">
+    <div class="section-header"><div class="section-num">C</div><h2 class="section-title">Consent to Use of Data</h2></div>
+    <p>You agree that Licensor may collect and use technical data and related information — including technical information about your device, system and application software, and peripherals — gathered periodically to facilitate the provision of software updates, product support, and other services related to the Licensed Application.</p>
+    <div class="highlight-card"><strong>Privacy note:</strong> Licensor may use this information only in a form that does not personally identify you, to improve its products or to provide services or technologies to you.</div>
+  </section>
+
+  <section class="policy-section" id="termination">
+    <div class="section-header"><div class="section-num">D</div><h2 class="section-title">Termination</h2></div>
+    <p>This Standard EULA is effective until terminated by you or Licensor. Your rights under this Standard EULA will terminate automatically if you fail to comply with any of its terms.</p>
+  </section>
+
+  <section class="policy-section" id="external-services">
+    <div class="section-header"><div class="section-num">E</div><h2 class="section-title">External Services</h2></div>
+    <p>The Licensed Application may enable access to Licensor's and/or third-party services and websites (collectively, "External Services"). You agree to use the External Services at your sole risk.</p>
+    <ul class="policy-list">
+      <li>Licensor is not responsible for examining or evaluating the content or accuracy of any third-party External Services.</li>
+      <li>Data displayed by any Licensed Application or External Service — including financial, medical, and location information — is for general informational purposes only and is not guaranteed by Licensor.</li>
+      <li>You will not use External Services in any manner that infringes the intellectual property rights of Licensor or any third party.</li>
+      <li>You agree not to use the External Services to harass, abuse, stalk, threaten, or defame any person or entity.</li>
+      <li>External Services may not be available in all languages or in your home country.</li>
+    </ul>
+    <p>Licensor reserves the right to change, suspend, remove, or disable access to any External Services at any time without notice or liability.</p>
+  </section>
+
+  <section class="policy-section" id="no-warranty">
+    <div class="section-header"><div class="section-num">F</div><h2 class="section-title">No Warranty</h2></div>
+    <div class="warning-card">
+      <strong>Important disclaimer:</strong> Use of the Licensed Application is at your sole risk. To the maximum extent permitted by applicable law, the Licensed Application and any services it provides are offered "as is" and "as available," with all faults and without warranty of any kind. Licensor expressly disclaims all warranties and conditions — express, implied, or statutory — including but not limited to implied warranties of merchantability, satisfactory quality, fitness for a particular purpose, accuracy, quiet enjoyment, and non-infringement of third-party rights.
+    </div>
+    <p>No oral or written information or advice given by Licensor or its authorised representative shall create a warranty. Should the Licensed Application or services prove defective, you assume the entire cost of all necessary servicing, repair, or correction.</p>
+  </section>
+
+  <section class="policy-section" id="liability">
+    <div class="section-header"><div class="section-num">G</div><h2 class="section-title">Limitation of Liability</h2></div>
+    <p>To the extent not prohibited by law, Licensor shall not be liable for personal injury or any incidental, special, indirect, or consequential damages whatsoever, including damages for loss of profits, loss of data, business interruption, or any other commercial damages or losses, arising out of or related to your use of or inability to use the Licensed Application.</p>
+    <div class="highlight-card"><strong>Maximum liability:</strong> In no event shall Licensor's total liability to you for all damages exceed <strong>USD $50.00</strong>, except as may be required by applicable law in cases involving personal injury.</div>
+  </section>
+
+  <section class="policy-section" id="export">
+    <div class="section-header"><div class="section-num">H</div><h2 class="section-title">Export Restrictions</h2></div>
+    <p>You may not use or export the Licensed Application except as authorised by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular:</p>
+    <ul class="policy-list">
+      <li>The Licensed Application may not be exported or re-exported into any U.S.-embargoed countries.</li>
+      <li>The Licensed Application may not be exported to anyone on the U.S. Treasury Department's Specially Designated Nationals List or the U.S. Department of Commerce Denied Persons List or Entity List.</li>
+      <li>You represent and warrant that you are not located in any such country or on any such list.</li>
+      <li>You agree not to use the Licensed Application for any purpose prohibited by United States law, including the development, design, manufacture, or production of nuclear, missile, or chemical or biological weapons.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="government">
+    <div class="section-header"><div class="section-num">I</div><h2 class="section-title">U.S. Government Rights</h2></div>
+    <p>The Licensed Application and related documentation are "Commercial Items" as defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation" as those terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202. They are being licensed to U.S. Government end users only as Commercial Items and with only those rights as are granted to all other end users pursuant to the terms and conditions herein.</p>
+  </section>
+
+  <section class="policy-section" id="governing-law">
+    <div class="section-header"><div class="section-num">J</div><h2 class="section-title">Governing Law</h2></div>
+    <p>This Agreement and the relationship between you and Apple shall be governed by the laws of the State of California, excluding its conflicts of law provisions. You and Apple agree to submit to the personal and exclusive jurisdiction of the courts located within the county of Santa Clara, California, to resolve any dispute or claim arising from this Agreement.</p>
+    <div class="highlight-card">
+      <strong>EU, Switzerland, Norway &amp; Iceland residents:</strong> If you are a citizen of any European Union country, Switzerland, Norway, or Iceland, the governing law and forum shall be the laws and courts of your usual place of residence.
+    </div>
+    <p>The United Nations Convention on the International Sale of Goods is specifically excluded from application to this Agreement.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">Money Note</div>
+  <p>© 2025 Money Note. All rights reserved.</p>
+  <p style="margin-top:6px;">Questions? <a href="https://www.facebook.com/nbappsupport/" target="_blank" rel="noopener">Contact Support</a></p>
+</footer>
+
 </body>
 </html>
